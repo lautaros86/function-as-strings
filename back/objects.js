@@ -9,6 +9,10 @@ exports.objects = [
             customMax: {
                 static: { max: 10 },
                 variable: ['current']
+            },
+            customMatch: {
+                static: {text1: 'jamon'},
+                variable: ['text2']
             }
         }
     },
@@ -18,6 +22,10 @@ exports.objects = [
                 customBetween: {
                     static: { a: 20, b: 30 },
                     variable: ['c']
+                },
+                customMatch: {
+                    static: {text1: 'sandia'},
+                    variable: ['text2']
                 }
             }
     }
