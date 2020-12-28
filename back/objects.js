@@ -1,5 +1,8 @@
 exports.objects = [
     {
+        cant: 7,
+        price: 500,
+        paymentMethod: 'MercadoPago',
         name: "helado de mascarpopne",
         validators: {
             customBetween: {
@@ -7,25 +10,28 @@ exports.objects = [
                 variable: ['c']
             },
             customMax: {
-                static: { max: 10 },
+                static: { max: 1000 },
                 variable: ['current']
             },
-            customMatch: {
-                static: {text1: 'jamon'},
-                variable: ['text2']
+            checkAllowPayemntType: {
+                static: {allowedPayementTypes: ['Debito', 'Cheque']},
+                variable: ['paymentType']
             }
         }
     },
     {
+        cant: 9,
+        price: 500,
+        paymentMethod: 'MercadoPago',
         name: "retail de jujuy",
         validators: {
                 customBetween: {
                     static: { a: 20, b: 30 },
                     variable: ['c']
                 },
-                customMatch: {
-                    static: {text1: 'sandia'},
-                    variable: ['text2']
+                checkAllowPayemntType: {
+                    static: {allowedPayementTypes: ['MercadoPago', 'Cheque']},
+                    variable: ['paymentType']
                 }
             }
     }

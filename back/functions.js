@@ -10,11 +10,15 @@ function customMax(params) {
 
 function customMatch(params) {
     const {text1, text2} = params;
-    console.log('texto1: ', text1);
-    console.log('texto2: ', text2);
     return text1 === text2;
+}
+
+function checkAllowPayemntType(params) {
+    const {allowedPayementTypes, paymentType} = params;
+    return allowedPayementTypes.includes(paymentType);
 }
 
 exports.customBetween = customBetween;
 exports.customMax = customMax;
-exports.customMatch = customMatch;
+// exports.customMatch = customMatch;
+exports.checkAllowPayemntType = checkAllowPayemntType;
