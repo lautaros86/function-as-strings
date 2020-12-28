@@ -1,8 +1,6 @@
-function customBetween(a, b, c) {
-    return c > a && c < b
-}
+var validatorFunctions = require('./functions')
 
-var funcionString = customBetween.toString()
+var funcionString = validatorFunctions.customBetween.toString()
 
 console.log(funcionString)
 
